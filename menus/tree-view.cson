@@ -21,6 +21,7 @@
 
 'context-menu':
   '.tree-view .full-menu': [
+    {'label': 'Nuevo Archivo .c', 'command': 'tree-view:increidle-add-file'}
     {'label': 'New File', 'command': 'tree-view:add-file'}
     {'label': 'New Folder', 'command': 'tree-view:add-folder'}
     {'type': 'separator'}
@@ -51,6 +52,7 @@
   ]
 
   '.tree-view .full-menu .project-root > .header': [
+    {'label': 'Nuevo Archivo .c', 'command': 'tree-view:increidle-add-file'}
     {'label': 'New File', 'command': 'tree-view:add-file'}
     {'label': 'New Folder', 'command': 'tree-view:add-folder'}
     {'type': 'separator'}

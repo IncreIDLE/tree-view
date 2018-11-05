@@ -741,11 +741,11 @@ class TreeView
               @emitter.emit 'move-entry-failed', {initialPath, newPath}
               atom.notifications.addWarning("Unable to paste paths: #{initialPaths}", detail: error.message)
 
-  add: (isCreatingFile) ->
+  add: (isCreatingFile, isIncreidle) ->
     selectedEntry = @selectedEntry() ? @roots[0]
     selectedPath = selectedEntry?.getPath() ? ''
 
-    dialog = new AddDialog(selectedPath, isCreatingFile)
+    dialog = new AddDialog(selectedPath, isCreatingFile, isIncreidle)
     dialog.onDidCreateDirectory (createdPath) =>
       @entryForPath(createdPath)?.reload()
       @selectEntryForPath(createdPath)
